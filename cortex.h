@@ -333,7 +333,7 @@ int Cortex_SetDataHandlerFunc(void (*MyFunction)(sFrameOfData* pFrameOfData));
  *
  *  \return maReturnCode - RC_Okay, RC_ApiError, RC_NetworkError, RC_GeneralError
 */
-int Cortex_Initialize(const char* szMyNicCardAddress, const char* szCortexNicCardAddress);  // Hostname or IP Address or NULL (auto find)
+int Cortex_Initialize(const char* szMyNicCardAddress, const char* szCortexNicCardAddress, unsigned short wCortexPort, unsigned short szMultiCastPort);  // Hostname or IP Address or NULL (auto find)
 
 //==================================================================
 

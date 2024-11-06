@@ -510,7 +510,9 @@ LOCAL int Initialize_ListenForFramesOfData()
  *  \return maReturnCode - RC_Okay, RC_ApiError, RC_NetworkError, RC_GeneralError
  */
 int Cortex_Initialize(const char* szMyNicCardAddress,
-                      const char* szCortexNicCardAddress)
+                      const char* szCortexNicCardAddress,
+                      unsigned short szCortexPort = 1510,
+                      unsigned short szMultiCastPort = 1001)
 {
   int retval;
   in_addr MyAddresses[10];
@@ -522,6 +524,9 @@ int Cortex_Initialize(const char* szMyNicCardAddress,
     LogMessage(VL_Warning, "Already Initialized");
     return RC_GeneralError;
   }
+
+  wCortexPort = szCortexPort;
+  wMultiCastPort = szMultiCastPort;
 
   nAddresses = Cortex_GetAllOfMyAddresses((unsigned long *) MyAddresses, 10);
   if (nAddresses < 0) {
