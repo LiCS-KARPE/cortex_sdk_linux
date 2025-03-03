@@ -55,7 +55,7 @@ LOCAL sFrameOfData Polled_FrameOfData;
 //LOCAL  unsigned short wMyPort = 1600;         // My outgoing port (Cortex auto-replies to me here)
 LOCAL unsigned short wMyPort = 0; // Let the socket library find an available port
 LOCAL unsigned short wCortexPort = 1510; // 1002; // Cortex is listening at this port
-LOCAL unsigned short wMultiCastPort = 1001; // Cortex sends frames to this port and associated address
+LOCAL unsigned short wMultiCastPort = 1511; // Cortex sends frames to this port and associated address
 //LOCAL  unsigned short wMultiCastPort = 1511;  // Cortex sends frames to this port and associated address
 
 //LOCAL  in_addr MyNicCardAddress={ 10,  1,  2,199};   // My local IP address
